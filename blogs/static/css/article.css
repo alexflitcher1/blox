@@ -1,0 +1,14 @@
+.article {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    min-height:130px
+}
+
+.content {
+    padding: 10px;
+
+}

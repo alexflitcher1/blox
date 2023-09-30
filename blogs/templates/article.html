@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+{% load poll_extras %}
+<html lang="en">
+<head>
+    {% include "static/meta.html" %}
+    <link rel="stylesheet" href="{% static "css/article.css" %}?a=1">
+    <title>Document</title>
+</head>
+<body>
+    {% include "static/header.html" %}
+    <div class="content">
+        <div class="article" id="{{ article.id }}">
+            <div class="common">
+                <div class="author">{{ content.0.0.username }}</div>
+                <div class="timestamp">{{ content.0.0.timestamp }}</div>
+            </div>
+            <div class="text">{{ content.0.0.text|escape|cut}}</div>
+        </div>
+    </div>
+    {% include "static/footer.html" %}
+</body>
+</html>

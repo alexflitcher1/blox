@@ -1,0 +1,36 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    {% include "static/meta.html" %}
+    <link rel="stylesheet" href="{% static "css/form.css" %}?a=1">
+    <title>Регистрация</title>
+</head>
+<body>
+    {% include "static/header.html" %}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-header">Регистрация</div>
+        <div class="form">
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+                <span class="field__label-wrap" aria-hidden="true">
+                    <span class="field__label">{{ field.label }}</span>
+                </span>
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        {% endfor %}
+        </div>
+        <input type="submit" value="Регистрация">
+    </form>
+    {% include "static/footer.html" %}
+</body>
+</html>

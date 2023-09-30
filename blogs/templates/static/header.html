@@ -1,0 +1,9 @@
+<div class="header">
+    <div class="title"><a href="/">zxc 人amulet abuzer人 suffered ></a></div>
+    {% if user.is_authenticated %}
+        <div class="login"><a href="/profile">Профиль</a></div>
+    {% else %}
+        <div class="login"><a href="/login">Войти</a></div>
+        <div class="signin"><a href="/signup">Регистрация</a></div>
+    {% endif %}
+</div>
