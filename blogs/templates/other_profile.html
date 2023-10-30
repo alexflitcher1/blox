@@ -1,0 +1,33 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    {% include "static/meta.html" %}
+    <link rel="stylesheet" href="{% static "css/profile.css" %}?a=1">
+    <title>Профиль | {{ user }}</title>
+</head>
+<body>
+    {% include "static/header.html" %}
+    <div class="content">
+        <div class="profile_articles">
+        <div class="arts">{{ userdata.first_name }} {{ userdata.username }}  {{ userdata.last_name }}</div>
+        <div class="arts">Ваши статьи</div>
+            <div class="articles">
+                {% if articles.0 %}
+                    {% for article in articles.0 %}
+                    <div class="article" id="{{ article.id }}">
+                        <div class="common">
+                            <div class="author">{{ article.username }}</div>
+                            <div class="title">{{ article.title }}</div>
+                            <div class="timestamp">{{ article.timestamp }}</div>
+                        </div>
+                        <div class="text"><a href="/article/{{ article.id }}">{{ article.text|truncatechars:200 }}</a></div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% include "static/footer.html" %}
+</body>
+</html>

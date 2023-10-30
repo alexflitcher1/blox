@@ -21,6 +21,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('article/<int:id>', blogs.views.article),
     path('', blogs.views.index),
-    path('signup', blogs.views.signup),
-    path('login', blogs.views.login),
+    path('user/signup', blogs.views.signup),
+    path('user/login', blogs.views.login),
+    path('user/profile', blogs.views.profile),
+    path('user/logout', blogs.views.logout),
+    path('user/settings', blogs.views.settings),
+    path('user/change-password', blogs.views.change_password),
+    path('user/profile/<str:username>', blogs.views.other_profile),
+    path('acticles/new', blogs.views.articles_new)
 ]

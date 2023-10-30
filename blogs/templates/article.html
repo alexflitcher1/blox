@@ -12,7 +12,8 @@
     <div class="content">
         <div class="article" id="{{ article.id }}">
             <div class="common">
-                <div class="author">{{ content.0.0.username }}</div>
+                <div class="author"><a href="/user/profile/{{content.0.0.username}}">{{ content.0.0.username }}</a></div>
+                <div class="title">{{ content.0.0.title }}</div>
                 <div class="timestamp">{{ content.0.0.timestamp }}</div>
             </div>
             <div class="text">{{ content.0.0.text|escape|cut}}</div>

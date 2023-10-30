@@ -3,8 +3,9 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 class Articles(models.Model):
-    username = models.CharField(max_length=255)
-    timestamp = models.DateTimeField()
+    userid = models.IntegerField()
+    title = models.CharField(max_length=255)
+    timestamp = models.DateTimeField(auto_now_add=True)
     text = models.TextField()
 
 class Users(AbstractUser):

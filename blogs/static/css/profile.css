@@ -1,0 +1,49 @@
+.content {
+    width: 99%;
+}
+
+.profile_articles {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 20;
+}
+
+.left {
+    background-color: indigo;
+    color: white;
+    padding: 10px;
+    justify-self: right;
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+.article_new {
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    margin: 10px;
+    padding: 10px;
+    min-height: 80px;
+}
+
+.article_new div {
+    height: 80% !important;
+    width: 25%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.article_new div  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 5px solid pink;
+    border-radius: 5px;
+    justify-content: center;
+    justify-content: center;
+}

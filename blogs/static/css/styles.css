@@ -15,21 +15,21 @@ body {
     background-color: indigo;
 }
 
-.header a {
+.header a, .left a {
     color: white !important;
 }
 
-.header a:focus {
+.header a:focus, .left a:focus {
     border-bottom: 1px solid;
     background: none !important;
 }
   
-.header a:hover {
+.header a:hover, .left a:hover {
     border-bottom: 1px solid;
     background: none;
 }
   
-.header a:active {
+.header a:active, .left a:active {
     background: none;
     color: #fff;
 }
@@ -37,8 +37,13 @@ body {
 .content, .header, .header > div, .title {
     display: flex;
     padding: 10px;
+    width: 100%;
     align-self: center;
     justify-content: center;
+}
+
+.arts {
+    margin: auto;
 }
 
 .title {
@@ -55,19 +60,21 @@ body {
 
 .articles {
     display: flex;
-    justify-content: left;
+    width: 90%;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-left: 10px;
 }
 
 .article {
+    border-radius: 5px;
     display: flex;
     width: 20%;
     flex-direction: column;
     background-color: #f0f0f0;
     margin: 10px;
     padding: 10px;
-    min-height:130px
+    min-height: 130px;
+    word-wrap: break-word !important;
 }
 
 .article > .common {
@@ -93,6 +100,7 @@ body {
 
 .text a:visited, .text a:link {
     color: #0f0f0f;
+    word-wrap: break-word !important;
 }
 
 a {
@@ -125,9 +133,13 @@ a:visited {
     color: red;
 }
 
-@media only screen and (max-width: 900px) {
-    .article {
-        width: 100%;
-        min-height: 80px;
-    }    
+@media only screen and (max-width: 1500px) {
+    .content {
+        display: block;
+    }
+    .article, .article_new {
+        width: 50% !important;
+        min-height: 80px !important;
+        word-wrap: break-all !important;
+    }
 }

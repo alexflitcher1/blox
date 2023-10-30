@@ -11,7 +11,8 @@
             {% for article in content.0 %}
             <div class="article" id="{{ article.id }}">
                 <div class="common">
-                    <div class="author">{{ article.username }}</div>
+                    <div class="author"><a href="/user/profile/{{article.username}}">{{ article.username }}</a></div>
+                    <div class="title">{{ article.title }}</div>
                     <div class="timestamp">{{ article.timestamp }}</div>
                 </div>
                 <div class="text"><a href="/article/{{ article.id }}">{{ article.text|truncatechars:200 }}</a></div>

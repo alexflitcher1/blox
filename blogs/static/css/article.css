@@ -1,14 +1,14 @@
 .article {
     display: flex;
-    width: 70%;
+    width: 60% !important;
     flex-direction: column;
     background-color: #fff;
     margin: 10px;
     padding: 10px;
-    min-height:130px
+    min-height: 130px;
+    word-wrap: break-word !important;
 }
 
 .content {
     padding: 10px;
-
 }
